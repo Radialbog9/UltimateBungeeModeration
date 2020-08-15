@@ -1,0 +1,4 @@
+name: ${projName}
+author: ${projAuthor}
+version: ${projVersion}
+main: ${projMain}
