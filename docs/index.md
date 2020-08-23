@@ -2,4 +2,4 @@
 layout: default
 ---
 
-This is the website
+UltimateBungeeModeration is a tool for server admins which adds in commands and features that help your server grow!

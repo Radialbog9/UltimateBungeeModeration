@@ -30,6 +30,8 @@
                 <includes>
                     <include>bungee.yml</include>
                     <include>config.yml</include>
+                    <include>language.yml</include>
+                    <include>version.txt</include>
                 </includes>
             </resource>
         </resources>
