@@ -4,6 +4,7 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
+import uk.radialbog9.bungee.ultimatebungeemoderation.api.UBMConfigProvider;
 import uk.radialbog9.bungee.ultimatebungeemoderation.utils.UBMUtils;
 
 import java.io.File;
@@ -37,51 +38,6 @@ public class BungeeMain extends Plugin {
             getLogger().log(Level.SEVERE, "Error while finding plugin version!");
             e.printStackTrace();
         }
-        loadConfig();
-    }
-
-    public void loadConfig() {
-        if (!getDataFolder().exists()) getDataFolder().mkdir();
-
-        File file = new File(getDataFolder(), "config.yml");
-        File file2 = new File(getDataFolder(), "language.yml");
-
-        if (!file.exists()) {
-            try (InputStream in = getResourceAsStream("config.yml")) {
-                Files.copy(in, file.toPath());
-            } catch (IOException e) {
-                getLogger().log(Level.SEVERE, "Failed to save default config!");
-                e.printStackTrace();
-            }
-        }
-        if (!file2.exists()) {
-            try (InputStream in = getResourceAsStream("language.yml")) {
-                Files.copy(in, file2.toPath());
-            } catch (IOException e) {
-                getLogger().log(Level.SEVERE, "Failed to save default language!");
-                e.printStackTrace();
-            }
-        }
-
-        try {
-            config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "config.yml"));
-        } catch (IOException e) {
-            getLogger().log(Level.SEVERE, "Failed to load config!");
-            e.printStackTrace();
-        }
-        try {
-            language = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "language.yml"));
-        } catch (IOException e) {
-            getLogger().log(Level.SEVERE, "Failed to load language file!");
-            e.printStackTrace();
-        }
-    }
-    public void saveConfig() {
-        try {
-            ConfigurationProvider.getProvider(YamlConfiguration.class).save(config, new File(getDataFolder(), "config.yml"));
-        } catch (IOException e) {
-            getLogger().log(Level.SEVERE, "Failed to save config!");
-            e.printStackTrace();
-        }
+        UBMConfigProvider.loadConfig();
     }
 }

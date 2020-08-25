@@ -1,4 +1,4 @@
-package uk.radialbog9.bungee.ultimatebungeemoderation.utils;
+package uk.radialbog9.bungee.ultimatebungeemoderation.api;
 
 //UBMLangProvider
 //Contains "pointers" for all the language strings
