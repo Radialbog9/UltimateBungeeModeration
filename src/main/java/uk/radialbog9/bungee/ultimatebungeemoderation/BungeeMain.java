@@ -5,6 +5,7 @@ import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 import uk.radialbog9.bungee.ultimatebungeemoderation.api.UBMConfigProvider;
+import uk.radialbog9.bungee.ultimatebungeemoderation.utils.UBMCommandRegisterer;
 import uk.radialbog9.bungee.ultimatebungeemoderation.utils.UBMUtils;
 
 import java.io.File;
@@ -39,5 +40,6 @@ public class BungeeMain extends Plugin {
             e.printStackTrace();
         }
         UBMConfigProvider.loadConfig();
+        UBMCommandRegisterer.registerCommands();
     }
 }
