@@ -21,7 +21,7 @@ public class BungeeMain extends Plugin {
     public Configuration config;
     public Configuration language;
 
-    public String plVersion;
+    public String plVersion = "${projVersion}";
 
 
     public static BungeeMain getInstance() {
@@ -33,12 +33,14 @@ public class BungeeMain extends Plugin {
 
     @Override
     public void onEnable() {
+        /*
         try {
             plVersion = UBMUtils.getInstance().readFromInputStream(getResourceAsStream("version.txt"));
         } catch (IOException e) {
             getLogger().log(Level.SEVERE, "Error while finding plugin version!");
             e.printStackTrace();
         }
+        */
         UBMConfigProvider.loadConfig();
         UBMCommandRegisterer.registerCommands();
     }

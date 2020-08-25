@@ -35,6 +35,13 @@
                     <include>version.txt</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>src/main/java/uk/radialbog9/bungee/ultimatebungeemoderation</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>BungeeMain.java</include>
+                </includes>
+            </resource>
         </resources>
         <plugins>
             <plugin>
