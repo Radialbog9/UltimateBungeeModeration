@@ -24,6 +24,7 @@ public class CmdUBM extends Command {
                                 "&r &aby &r&6&lRadialbog9")));
             } else if (args[0] == "reload") {
                 UBMConfigProvider.loadConfig();
+                sender.sendMessage(new TextComponent(UBMLang.getInstance().getLang(UBMLangProvider.CONFIGRELOADED)));
             }
         } else {
             sender.sendMessage(new TextComponent(UBMLang.getInstance().getLang(UBMLangProvider.NOPERMISSION)));
