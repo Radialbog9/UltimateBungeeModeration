@@ -21,6 +21,8 @@ public class BungeeMain extends Plugin {
     public Configuration config;
     public Configuration language;
 
+    public File dataFolder = getDataFolder();
+
     public String plVersion = "${projVersion}";
 
 
