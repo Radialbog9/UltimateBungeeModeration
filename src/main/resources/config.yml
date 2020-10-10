@@ -3,3 +3,42 @@
 # by Radialbog9              #
 ##############################
 
+# Toggles features (true means the feature's turned on, false means it's off)
+features:
+  staffchat: true
+  firstjoinalert: true
+  staffjoinalert: true
+  reports: true
+
+permissions:
+  general:
+    maincmd: 'ubm.cmd.main'
+  staffchat:
+    seeonjoin: 'ubm.sc.join'
+    toggle: 'ubm.sc.toggle'
+
+# Configuration for modules
+# If you have disabled some of them you do not need to edit their configs.
+config:
+  # Settings for Staff Chat
+  staffchat:
+    # Use the MOTD in bungee config instead of the server name
+    usemotd: false
+    # Servers that the commands will not run on
+    blocked-servers:
+      - 'server1'
+      - 'server2'
+
+  # Settings for Staff Switch Alert
+  staffswitch:
+    # Use the MOTD in bungee config instead of the server name
+    usemotd: false
+
+  # Settings for reports
+  reports:
+    # Use the MOTD in bungee config instead of the server name
+    usemotd: false
+    # Servers that the commands will not run on
+    blocked-servers:
+      - 'server1'
+      - 'server2'

@@ -1,2 +1,19 @@
-nopermission: "&4You do not have permission to execute this command."
-configreloaded: "&aConfig reloaded."
+##############################
+# ULTIMATE BUNGEE MODERATION #
+# by Radialbog9              #
+##############################
+# All messages are grouped into categories.
+# Any placeholders will be in angle brackets (e.g "<player>")
+general:
+  nopermission: "&4You do not have permission to execute this command."
+  configreloaded: "&aConfig reloaded."
+staffchat:
+  toggledon: "&aYour staff chat has been toggled &r&a&lON&r&a."
+  toggledoff: "&aYour staff chat has been toggled &r&c&lOFF&r&a."
+  toggledpon: "&aStaff chat for &r&a<player>&r&a has been toggled &r&a&lON&r&a."
+  toggledpoff: "&aStaff chat for &r&a<player>&r&a has been toggled &r&c&lOFF&r&a."
+  messageformat: "&b(&r&a&lStaff&r&b) (&r&e<server>&r&b) [&r&e<sender>&r&b] <message>"
+firstjoinalert:
+  messageformat: "&c(&r&a&lStaff&r&c) &r&e<player>&r&c joined for the first time!"
+staffalert:
+  messageformat: "&a(&r&a&lStaff&r&c) &r&e<player>&r&c switched servers from <oldserver> to <newserver>"

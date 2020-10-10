@@ -23,10 +23,10 @@ public class UBMConfigProvider {
      * Loads UBM config from file
      */
     public static void loadConfig() {
-        if (!BungeeMain.getInstance().dataFolder.exists()) BungeeMain.getInstance().dataFolder.mkdir();
+        if (!BungeeMain.getInstance().getDataFolder().exists()) BungeeMain.getInstance().getDataFolder().mkdir();
 
-        File file = new File(BungeeMain.getInstance().dataFolder, "config.yml");
-        File file2 = new File(BungeeMain.getInstance().dataFolder, "language.yml");
+        File file = new File(BungeeMain.getInstance().getDataFolder(), "config.yml");
+        File file2 = new File(BungeeMain.getInstance().getDataFolder(), "language.yml");
 
         if (!file.exists()) {
             try (InputStream in = BungeeMain.getInstance().getResourceAsStream("config.yml")) {

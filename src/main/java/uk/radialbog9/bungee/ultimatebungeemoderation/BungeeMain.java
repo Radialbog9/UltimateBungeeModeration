@@ -2,17 +2,8 @@ package uk.radialbog9.bungee.ultimatebungeemoderation;
 
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
-import net.md_5.bungee.config.ConfigurationProvider;
-import net.md_5.bungee.config.YamlConfiguration;
 import uk.radialbog9.bungee.ultimatebungeemoderation.api.UBMConfigProvider;
-import uk.radialbog9.bungee.ultimatebungeemoderation.utils.UBMCommandRegisterer;
 import uk.radialbog9.bungee.ultimatebungeemoderation.utils.UBMUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.util.logging.Level;
 
 public class BungeeMain extends Plugin {
 
@@ -20,8 +11,6 @@ public class BungeeMain extends Plugin {
 
     public Configuration config;
     public Configuration language;
-
-    public File dataFolder = getDataFolder();
 
     public String plVersion = "${projVersion}";
 
@@ -43,7 +32,8 @@ public class BungeeMain extends Plugin {
             e.printStackTrace();
         }
         */
+        BungeeMain.instance = this;
         UBMConfigProvider.loadConfig();
-        UBMCommandRegisterer.registerCommands();
+        UBMUtils.registerCommands();
     }
 }

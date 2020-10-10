@@ -1,6 +1,8 @@
 package uk.radialbog9.bungee.ultimatebungeemoderation.utils;
 
 import net.md_5.bungee.api.ChatColor;
+import uk.radialbog9.bungee.ultimatebungeemoderation.BungeeMain;
+import uk.radialbog9.bungee.ultimatebungeemoderation.CmdUBM;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,22 +10,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class UBMUtils {
-    private static UBMUtils instance;
-    public static UBMUtils getInstance() {
-        return UBMUtils.instance;
-    }
-    public static void setInstance(UBMUtils instance) {
-        UBMUtils.instance = instance;
-    }
-
-    public String strSan(String inString) {
+    public static String strSan(String inString) {
         String sanitizedString;
         sanitizedString = inString;
         sanitizedString = ChatColor.translateAlternateColorCodes('&', sanitizedString);
         return sanitizedString;
     }
 
-    public String readFromInputStream(InputStream inputStream)
+    public static String readFromInputStream(InputStream inputStream)
             throws IOException {
         StringBuilder resultStringBuilder = new StringBuilder();
         try (BufferedReader br
@@ -34,5 +28,11 @@ public class UBMUtils {
             }
         }
         return resultStringBuilder.toString();
+    }
+
+    public static void registerCommands() {
+        BungeeMain.getInstance().getProxy().getPluginManager().registerCommand(BungeeMain.getInstance(), new CmdUBM("ultimatebungeemoderation"));
+        BungeeMain.getInstance().getProxy().getPluginManager().registerCommand(BungeeMain.getInstance(), new CmdUBM("ubm"));
+        BungeeMain.getInstance().getProxy().getPluginManager().registerCommand(BungeeMain.getInstance(), new CmdUBM("bungeemoderation"));
     }
 }
