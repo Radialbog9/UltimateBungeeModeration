@@ -1,7 +1,7 @@
 # UltimateBungeeModeration
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5DFKLGMU7QAMU&source=url)
-[![Jenkins build status](http://ci.radialbog9.uk/job/Minecraft%20Manhunt/badge/icon)](http://ci.radialbog9.uk/job/Minecraft%20Manhunt/)
+[![Jenkins build status](http://ci.radialbog9.uk/job/UltimateBungeeModeration/badge/icon)](http://ci.radialbog9.uk/job/UltimateBungeeModeration/)
 
 **Warning:** This is in development. Please only use for testing and do not use on a production server.
 
